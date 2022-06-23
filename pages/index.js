@@ -5,6 +5,85 @@ import Head from "next/head";
 import Image from "next/image";
 import heroImage from "/public/main-hero.jpg";
 import { BsArrowRight } from "react-icons/bs";
+import YouTube from "react-youtube";
+import ServiceCard from "@/components/cards/ServiceCard";
+import NewsCard from "@/components/cards/NewsCard";
+
+//seed data
+
+const services = [
+  {
+    icon: "/city-council.png",
+    title: "Town Council",
+    description: "We are surrounded by beautiful mountains and lots of farms. ",
+  },
+  {
+    icon: "/fire.png",
+    title: "Fire Department",
+    description: "We are surrounded by beautiful mountains and lots of farms. ",
+  },
+  {
+    icon: "/water.png",
+    title: "Water Department",
+    description: "We are surrounded by beautiful mountains and lots of farms. ",
+  },
+  {
+    icon: "/user.png",
+    title: "Senior Center",
+    description: "We are surrounded by beautiful mountains and lots of farms. ",
+  },
+];
+
+const news = [
+  {
+    date: "Feb. 8, 2022",
+    title: "Tree Give-Away",
+    excerpt: "Tree Give-Away",
+    readTime: "1 Min.",
+    link: "/#",
+    image: "/news-1.jpg",
+    tag: "Arbor daytree city",
+  },
+  {
+    date: "Feb. 3, 2022",
+    title: "City Council Meeting 5-3-22",
+    excerpt: "",
+    readTime: "1 Min.",
+    link: "/#",
+    image: "/news-2.jpg",
+    tag: "Council",
+  },
+  {
+    date: "Jan. 22, 2022",
+    title: "Adona Boil Order Lifted",
+    excerpt: "The recent boil order for the City of Adona has been lifted.",
+    readTime: "1 Min.",
+    link: "/#",
+    image: "/news-3.jpg",
+    tag: "Boil Order Adona",
+  },
+];
+
+const CommunityVideo = () => {
+  const opts = {
+    height: "560",
+    width: "315",
+
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 0,
+    },
+  };
+
+  return (
+    <YouTube
+      videoId="JDKDIQuJxik"
+      opts={opts}
+      onReady={(e) => e.target.pauseVideo()}
+    />
+  );
+};
+
 export default function Home() {
   return (
     <>
@@ -42,6 +121,113 @@ export default function Home() {
               />
             </div>
             <div className=" absolute h-full w-4/6 bg-casa-blue rounded-lg -z-10 right-0 top-0 "></div>
+          </div>
+        </div>
+      </Container>
+      <div className=" bg-casa-green  mt-40 text-white ">
+        <Container>
+          <div className=" grid grid-cols-12 gap-x-12 py-32 ">
+            <div className=" col-span-6  ">
+              <div className=" relative ">
+                <div className="w-4/5 ">
+                  <Image
+                    alt="tree community"
+                    src="/tree-community.jpg"
+                    objectFit="cover"
+                    objectPosition="center"
+                    width={677}
+                    height={452}
+                    layout="responsive"
+                  />
+                </div>
+                <div className=" absolute z-10 right-0 top-1/2 border-casa-green border-[12px]">
+                  <CommunityVideo />
+                </div>
+              </div>
+            </div>
+            <div className=" col-span-6 font-poppins ">
+              <p className=" font-roboto text-2xl font-medium mb-8">
+                a “Tree-City USA” community
+              </p>
+              <h2 className=" font-bold text-6xl mb-16 ">
+                We’re a small community located in the Western part of Perry
+                County along Highway 10 just South of Petit Jean Mountain.
+              </h2>
+              <div className=" text-xl font-medium font-roboto flex flex-col gap-y-8 ">
+                <p>
+                  We are surrounded by beautiful mountains and lots of farms.
+                </p>
+                <p>
+                  If you love the rural beauty of Arkansas, come by, and give us
+                  a visit.
+                </p>
+                <p>
+                  Our small community of just under 200 residents is working
+                  hard to make Casa the idealistic community it once was during
+                  the height of its growth at the turn of the 1900s.
+                </p>
+                <p>
+                  Casa has recently been named a “Tree-City USA” community and
+                  other beautification projects are underway.
+                </p>
+              </div>
+              <Button
+                noBg
+                link="#"
+                rightIcon={<BsArrowRight size={32} />}
+                className="text-xl font-bold"
+              >
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </div>
+      <Container>
+        <div className=" mt-48 ">
+          <p className=" text-center uppercase text-casa-blue font-roboto font-medium text-2xl mb-8">
+            services
+          </p>
+          <h2 className=" text-6xl font-bold text-center  ">
+            Learn More About Casa
+          </h2>
+          <div className=" grid mt-20 grid-cols-12 gap-12 ">
+            {services.map((service, i) => {
+              return (
+                <div key={i} className=" col-span-3 ">
+                  <ServiceCard
+                    description={service.description}
+                    icon={service.icon}
+                    title={service.title}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="mt-48">
+          <p className=" text-center uppercase text-casa-blue font-roboto font-medium text-2xl mb-8">
+            news
+          </p>
+          <h2 className=" text-6xl font-bold text-center  ">Latest News</h2>
+          <div className=" grid mt-20 grid-cols-12 gap-12 mb-96 ">
+            {news.map(
+              ({ date, image, link, readTime, tag, title, excerpt }, i) => {
+                return (
+                  <div key={i} className=" col-span-4 ">
+                    <NewsCard
+                      date={date}
+                      image={image}
+                      link={link}
+                      readTime={readTime}
+                      tag={tag}
+                      title={title}
+                      excerpt={excerpt}
+                    />
+                  </div>
+                );
+              }
+            )}
           </div>
         </div>
       </Container>

@@ -1,12 +1,21 @@
 import Link from "next/link";
 
-const Button = ({ link, children, className = "", rightIcon = false }) => {
+const Button = ({
+  link = "#",
+  children,
+  className = "",
+  rightIcon = false,
+  noBg = false,
+}) => {
   return (
     <Link href={link}>
       <a
         className={` font-poppins font-bold text-xl text-white rounded-2xl ${className}`}
       >
-        <div className=" py-6 px-8 flex gap-x-4 items-center ">
+        <div
+          style={{ paddingLeft: `${noBg ? 0 : "2rem"}` }}
+          className=" py-6 pr-8 flex gap-x-4 items-center "
+        >
           {" "}
           {children}
           {rightIcon && <span> {rightIcon} </span>}
