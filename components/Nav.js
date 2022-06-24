@@ -34,7 +34,7 @@ const Nav = () => {
                 </li>
                 <li>
                   {" "}
-                  <Link href="/news">
+                  <Link href="/news-and-events">
                     <a>News & Events</a>
                   </Link>{" "}
                 </li>
