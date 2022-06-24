@@ -47,6 +47,36 @@ const about = () => {
         </div>
       </Container>
       <div className=" bg-black  mt-72 mb-20 w-full h-80 "></div>
+      <Container>
+        <div className=" mt-40 ">
+          <p className=" text-casa-blue uppercase text-2xl font-medium font-roboto mb-4 ">
+            Sources
+          </p>
+          <h2 className=" ml-7 font-bold text-6xl mb-12 ">
+            For Additional Information
+          </h2>
+          <div className="font-roboto text-xl font-medium mb-44 max-w-7xl ">
+            <p className=" mb-12 ">
+              “The Day the Lights Came On..” Rural Arkansas 41 (February 1987):
+              12-13. Living the Times, 1776-1976: A Bicentennial Tribute to
+              Perry County. Casa, AR: Perry County Extension Homemakers Council,
+              1989. Perry County Historical & Genealogical Society. Perry
+              County, Arkansas: Its Land & People. Marceline, MO: Walsworth
+              Publishing Company, 2004. Steven Teske Butler Center for Arkansas
+              Studies
+            </p>
+            <p className=" ">
+              <a
+                href="https://encyclopediaofarkansas.net/entries/casa-perry-county-7105/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://encyclopediaofarkansas.net/entries/casa-perry-county-7105/
+              </a>
+            </p>
+          </div>
+        </div>
+      </Container>
     </>
   );
 };
