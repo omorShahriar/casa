@@ -72,22 +72,22 @@ const Screen = () => {
     <>
       <Container>
         <Heading>Town Council</Heading>
-        <div className=" grid grid-cols-2 gap-x-32 items-center mt-28 mb-40 ">
-          <div className=" col-span-1 ">
-            <div className=" relative py-12 px-20 ">
-              <div>
+        <div className="  grid grid-cols-12 gap-16 mt-32 items-center mb-36 ">
+          <div className=" col-span-6 ">
+            <div className=" relative py-20 ">
+              <div className="w-[90%] shadow-md rounded-r-xl overflow-hidden ml-20  ">
                 <Image
-                  alt="town council hero image"
-                  src="/trial.jpg "
-                  width={1208}
-                  height={748}
+                  alt=" town council hero"
+                  src="/tc-h.png"
+                  width={686}
+                  height={463}
+                  layout="responsive"
                 />
               </div>
-
-              <div className=" bg-casa-blue top-0 left-0 absolute -z-10 w-4/6 rounded-2xl h-full " />
+              <div className=" absolute w-4/5 rounded-lg h-full shadow-lg bg-casa-blue top-0 left-0 -z-10 " />
             </div>
           </div>
-          <div className=" col-span-1 ">
+          <div className=" col-span-6 pl-20 ">
             <h2 className="  font-bold text-6xl leading-normal ">
               The City of Casa is managed by an elected town council form of
               governance with the Mayor elected as the City Manager.
