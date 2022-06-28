@@ -75,13 +75,15 @@ const Screen = () => {
         <div className=" grid grid-cols-2 gap-x-32 items-center mt-28 mb-40 ">
           <div className=" col-span-1 ">
             <div className=" relative py-12 px-20 ">
-              <Image
-                alt="town council hero image"
-                src="/tc-h.png "
-                width={686}
-                height={463}
-                layout="responsive"
-              />
+              <div>
+                <Image
+                  alt="town council hero image"
+                  src="/trial.jpg "
+                  width={1208}
+                  height={748}
+                />
+              </div>
+
               <div className=" bg-casa-blue top-0 left-0 absolute -z-10 w-4/6 rounded-2xl h-full " />
             </div>
           </div>
