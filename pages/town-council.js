@@ -77,9 +77,9 @@ const Screen = () => {
             <div className=" relative py-12 px-20 ">
               <Image
                 alt="town council hero image"
-                src="/town-council-hero.jpg "
-                width={1372}
-                height={925}
+                src="/tc-h.png "
+                width={686}
+                height={463}
                 layout="responsive"
               />
               <div className=" bg-casa-blue top-0 left-0 absolute -z-10 w-4/6 rounded-2xl h-full " />
