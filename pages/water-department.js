@@ -2,10 +2,16 @@ import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Heading from "@/components/Heading";
 import Image from "next/image";
+import Head from "next/head";
 
 const Screen = () => {
   return (
     <>
+      <Head>
+        <title>CITY OF CASA || Water Department</title>
+        <meta name="description" content="Water department page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Container>
         <Heading> Water Department </Heading>
         <div className=" mt-32 flex gap-x-32  mb-32   ">

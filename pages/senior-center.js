@@ -2,9 +2,16 @@ import Container from "@/components/Container";
 import Heading from "@/components/Heading";
 import Image from "next/image";
 import Button from "@/components/Button";
+import Head from "next/head";
+
 const Screen = () => {
   return (
     <>
+      <Head>
+        <title>CITY OF CASA || Senior Center</title>
+        <meta name="description" content="Senior Center page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Container>
         <Heading>Senior Center</Heading>
         <div className=" grid grid-cols-12 gap-8 mt-6 items-center  ">

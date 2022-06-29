@@ -1,10 +1,16 @@
 import Heading from "@/components/Heading";
 import Container from "@/components/Container";
 import Image from "next/image";
+import Head from "next/head";
 
 const Screen = () => {
   return (
     <>
+      <Head>
+        <title>CITY OF CASA || Fire Department</title>
+        <meta name="description" content="Fire department page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Container>
         <Heading>Fire Department</Heading>
         <div className=" grid grid-cols-12 gap-8 mt-32  ">

@@ -2,8 +2,8 @@ import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Heading from "@/components/Heading";
 import Image from "next/image";
-import React from "react";
 
+import Head from "next/head";
 const electedOfficials = [
   {
     name: "Loyra Rainey",
@@ -70,6 +70,11 @@ const Officials = ({
 const Screen = () => {
   return (
     <>
+      <Head>
+        <title>CITY OF CASA || Town Council</title>
+        <meta name="description" content="Town council page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Container>
         <Heading>Town Council</Heading>
         <div className="  grid grid-cols-12 gap-16 mt-32 items-center mb-36 ">
